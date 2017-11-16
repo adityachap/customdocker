@@ -2,6 +2,8 @@ FROM ubuntu:14.04
 
 
 # Let's start with some basic stuff.
+RUN chgrp -R 0 /var/ && chmod -R g=u /var/ 
+
 RUN apt-get update -qq && apt-get install -qqy \
     apt-transport-https \
     ca-certificates \
