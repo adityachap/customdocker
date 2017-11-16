@@ -16,7 +16,7 @@ RUN curl -sSL https://get.docker.com/ | sh
 ADD ./wrapdocker /usr/local/bin/wrapdocker
 RUN chmod +x /usr/local/bin/wrapdocker
 USER root
-RUN update-rc.d minidlna defaults
+RUN update-rc.d docker defaults
 # Define additional metadata for our image.
 VOLUME /var/lib/docker
 CMD ["wrapdocker"]
