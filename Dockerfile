@@ -22,7 +22,7 @@ USER root
 RUN update-rc.d docker defaults
 # Define additional metadata for our image.
 RUN chmod g=u /etc/passwd 
-ENTRYPOINT [ "uid_entrypoint" ] 
+ENTRYPOINT [ "/usr/local/bin/uid_entrypoint.sh" ] 
 
 VOLUME /var/lib/docker
 CMD ["wrapdocker"]
