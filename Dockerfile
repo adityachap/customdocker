@@ -26,7 +26,7 @@ USER root
 RUN update-rc.d docker defaults
 # Define additional metadata for our image.
 ENTRYPOINT [ "uid_entrypoint" ] 
-
+CMD run
 VOLUME /var/lib/docker
 CMD ["wrapdocker"]
 
