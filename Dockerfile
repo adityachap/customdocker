@@ -23,6 +23,7 @@ RUN chmod -R u+x ${APP_ROOT}/bin && \
     chgrp -R 0 ${APP_ROOT} && \
     chmod -R g=u ${APP_ROOT} /etc/passwd
 USER root
+RUN service docker start
 RUN update-rc.d docker defaults
 # Define additional metadata for our image.
 ENTRYPOINT [ "uid_entrypoint" ] 
